@@ -4,8 +4,7 @@
  *
  * @format
  */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
+import MainNavigator from "./src/navigation/AppNavigator";
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
@@ -27,12 +26,9 @@ function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+
+     <MainNavigator />
+
   );
 }
 
